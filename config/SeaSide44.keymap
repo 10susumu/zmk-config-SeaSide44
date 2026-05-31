@@ -67,34 +67,46 @@
 #define EQL    EQUAL
 #define QUES   QUESTION
 #define PSCR   PRINTSCREEN
-#define PGUP   PAGE_UP
-#define PGDN   PAGE_DOWN
+// #define PGUP   PAGE_UP
+// #define PGDN   PAGE_DOWN
 #define COMM   COMMA
 #define SLSH   SLASH
 #define ASTR   ASTERISK
 #define UNDS   UNDERSCORE
-#define TILD   TILDE
+// #define TILD   TILDE
 #define GRV    GRAVE
-#define COLN   COLON
+// #define COLN   COLON
 #define CIRC   CARET
 #define PERC   PERCENT
-#define LSFT   LEFT_SHIFT
-#define LCTL   LEFT_CONTROL
 
 /* 複合キー・システムキーの短縮定義 */
-#define CTL_LG2    mt LCTRL LANG2      // ctrl 英字
-#define SFT_SPC    mt LSHIFT SPACE      // shift space
-#define LSY_ENT    lt 3 ENTER      // レイヤ3 enter
-#define LNM_LG1    lt 2 LANG1     // レイヤ2 かな
-#define BITWAR     kp LS(LA(F))  // shift alt f
-#define LSUP       kp LS(UP)  // shift 上
-#define LSDOWN     kp LS(DOWN)  // shift 下
-#define LSLEFT     kp LS(LEFT)  // shift 左
-#define LSRIGHT    kp LS(RIGHT)  // shift 右
-#define LGLEFT     kp LG(LEFT)  // win 左
-#define LGRIGHT    kp LG(RIGHT)  // win 右
-#define LALEFT     kp LA(LEFT)  // win 左
-#define LARIGHT    kp LA(RIGHT)  // win 右
+// #define CTL_LG2    mt LCTRL LANG2      // ctrl 英字
+// #define SFT_SPC    mt LSHIFT SPACE      // shift space
+// #define LSY_ENT    lt 3 ENTER      // レイヤ3 enter
+// #define LNM_LG1    lt 2 LANG1     // レイヤ2 かな
+// #define BITWAR     kp LS(LA(F))  // shift alt f
+// #define LSUP       kp LS(UP)  // shift 上
+// #define LSDOWN     kp LS(DOWN)  // shift 下
+// #define LSLEFT     kp LS(LEFT)  // shift 左
+// #define LSRIGHT    kp LS(RIGHT)  // shift 右
+// #define LGLEFT     kp LG(LEFT)  // win 左
+// #define LGRIGHT    kp LG(RIGHT)  // win 右
+// #define LALEFT     kp LA(LEFT)  // win 左
+// #define LARIGHT    kp LA(RIGHT)  // win 右
+
+#define CTL_LG2 &mt LCTRL LANG2
+#define SFT_SPC &mt LSHIFT SPACE
+#define LSY_ENT &lt 3 ENTER
+#define LNM_LG1 &lt 2 LANG1
+#define BITWAR  &kp LS(LA(F))
+#define LSUP    &kp LS(UP)
+#define LSDOWN  &kp LS(DOWN)
+#define LSLEFT  &kp LS(LEFT)
+#define LSRIGHT &kp LS(RIGHT)
+#define LGLEFT  &kp LG(LEFT)
+#define LGRIGHT &kp LG(RIGHT)
+#define LALEFT  &kp LA(LEFT)
+#define LARIGHT &kp LA(RIGHT)
 
 keymap {
         compatible = "zmk,keymap";
@@ -104,7 +116,7 @@ keymap {
 &kp ESC   &kp Q     &kp W     &kp E     &kp R     &kp T             &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSPC
 &mo L_CS  &kp A     &kp S     &kp D     &kp F     &kp G             &kp H     &kp J     &kp K     &kp L     &kp QUES  &mo L_CS
 &mo L_NM  &kp Z     &kp X     &kp C     &kp V     &kp B             &kp N     &kp M     &mkp MB1  &mkp MB2  &mo L_SR  &mo L_NM
-          &kp LGUI  &kp LALT  &mo L_SC  &CTL_LG2  &SFT_SPC          &LSY_ENT  &LNM_LG1  &none     &none     &mo L_CF
+          &kp LGUI  &kp LALT  &mo L_SC  CTL_LG2   SFT_SPC           LSY_ENT   LNM_LG1   &none     &none     &mo L_CF
             >;
         };
 
@@ -137,8 +149,8 @@ keymap {
 
         SHORTCUT {
             bindings = <
-&none     &none     &none     &none     &none     &none             &none     &LGLEFT   &LSUP     &LGRIGHT  &none     &none
-&none     &none     &none     &none     &BITWAR   &none             &none     &LSLEFT   &LSDOWN   &LSRIGHT  &none     &none
+&none     &none     &none     &none     &none     &none             &none     LGLEFT    LSUP      LGRIGHT  &none     &none
+&none     &none     &none     &none     BITWAR   &none             &none      LSLEFT    LSDOWN    LSRIGHT  &none     &none
 &none     &none     &none     &none     &none     &none             &none     &none     &none     &none     &none     &none
           &trans    &trans    &trans    &trans    &trans            &trans    &trans    &none     &none     &none
             >;
@@ -157,7 +169,7 @@ keymap {
             bindings = <
 &kp ESC   &kp Q     &kp W     &kp E     &kp R     &kp T             &none     &none     &none     &none     &none     &none
 &none     &kp A     &kp S     &kp D     &kp F     &kp G             &none     &none     &none     &none     &none     &none
-&none     &kp Z     &kp X     &kp C     &kp V     &kp B             &none     &mkp MB3  &LALEFT   &LARIGHT  &none     &none
+&none     &kp Z     &kp X     &kp C     &kp V     &kp B             &none     &mkp MB3  LALEFT    LARIGHT   &none     &none
             &trans   &trans   &kp LALT  &kp LCTL  &kp SPC           &trans    &trans    &none     &none     &none
             >;
         };
