@@ -81,7 +81,6 @@
 #define LSFT   LEFT_SHIFT
 #define LCTL   LEFT_CONTROL
 
-
 /* 複合キー・システムキーの短縮定義 */
 #define CTL_LG2    mt LCTRL LANG2      // ctrl 英字
 #define SFT_SPC    mt LSHIFT SPACE      // shift space
@@ -96,13 +95,6 @@
 #define LGRIGHT    kp LG(RIGHT)  // win 右
 #define LALEFT     kp LA(LEFT)  // win 左
 #define LSRIGHT    kp LA(RIGHT)  // win 右
-
-
-
-LSLEFT
-
-
-
 
 keymap {
         compatible = "zmk,keymap";
