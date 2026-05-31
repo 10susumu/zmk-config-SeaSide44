@@ -56,7 +56,7 @@
 // #define UP     UP_ARROW
 // #define DOWN   DOWN_ARROW
 // #define LEFT   LEFT_ARROW
-// #define RGHT   RIGHT_ARROW
+#define RGHT   RIGHT_ARROW
 
 /* キー名・単語の短縮定義 */
 #define ENT    ENTER
@@ -79,33 +79,19 @@
 #define PERC   PERCENT
 
 /* 複合キー・システムキーの短縮定義 */
-// #define CTL_LG2    mt LCTRL LANG2      // ctrl 英字
-// #define SFT_SPC    mt LSHIFT SPACE      // shift space
-// #define LSY_ENT    lt 3 ENTER      // レイヤ3 enter
-// #define LNM_LG1    lt 2 LANG1     // レイヤ2 かな
-// #define BITWAR     kp LS(LA(F))  // shift alt f
-// #define LSUP       kp LS(UP)  // shift 上
-// #define LSDOWN     kp LS(DOWN)  // shift 下
-// #define LSLEFT     kp LS(LEFT)  // shift 左
-// #define LSRIGHT    kp LS(RIGHT)  // shift 右
-// #define LGLEFT     kp LG(LEFT)  // win 左
-// #define LGRIGHT    kp LG(RIGHT)  // win 右
-// #define LALEFT     kp LA(LEFT)  // win 左
-// #define LARIGHT    kp LA(RIGHT)  // win 右
-
-#define CTL_LG2 &mt LCTRL LANG2
-#define SFT_SPC &mt LSHIFT SPACE
-#define LSY_ENT &lt 3 ENTER
-#define LNM_LG1 &lt 2 LANG1
-#define BITWAR  &kp LS(LA(F))
-#define LSUP    &kp LS(UP)
-#define LSDOWN  &kp LS(DOWN)
-#define LSLEFT  &kp LS(LEFT)
-#define LSRIGHT &kp LS(RIGHT)
-#define LGLEFT  &kp LG(LEFT)
-#define LGRIGHT &kp LG(RIGHT)
-#define LALEFT  &kp LA(LEFT)
-#define LARIGHT &kp LA(RIGHT)
+#define CTL_LG2 &mt LCTRL LANG2        // ctrl 英字
+#define SFT_SPC &mt LSHIFT SPACE       // shift space
+#define LSY_ENT &lt 3 ENTER            // レイヤ3 enter
+#define LNM_LG1 &lt 2 LANG1            // レイヤ2 かな
+#define BITWAR  &kp LS(LA(F))          // shift alt f
+#define LSUP    &kp LS(UP)             // shift 上
+#define LSDOWN  &kp LS(DOWN)           // shift 下
+#define LSLEFT  &kp LS(LEFT)           // shift 左
+#define LSRIGHT &kp LS(RIGHT)          // shift 右
+#define LGLEFT  &kp LG(LEFT)           // win 左
+#define LGRIGHT &kp LG(RIGHT)          // win 右
+#define LALEFT  &kp LA(LEFT)           // alt 左
+#define LARIGHT &kp LA(RIGHT)          // alt 右
 
 keymap {
         compatible = "zmk,keymap";
@@ -122,7 +108,7 @@ keymap {
         CUSTOM {
             bindings = <
 &none     &none     &kp F2    &kp PGUP  &kp ENT   &kp TAB           &none     &kp F7    &kp UP    &kp ENT   &none     &none
-&none     &none     &kp HOME  &kp DEL   &kp END   &none             &kp BSPC  &kp LEFT  &kp DOWN  &kp RIGHT  &none     &none
+&none     &none     &kp HOME  &kp DEL   &kp END   &none             &kp BSPC  &kp LEFT  &kp DOWN  &kp RGHT  &none     &none
 &none     &none     &kp PSCR  &kp PGDN  &none     &none             &kp MINS  &kp EQL   &kp COMM  &kp DOT   &kp SLSH  &none
           &trans    &trans    &trans    &trans    &trans            &trans    &trans    &none     &none     &none
             >;
