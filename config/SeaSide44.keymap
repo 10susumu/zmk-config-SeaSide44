@@ -50,7 +50,7 @@
             tapping-term-ms = <200>;
         };
     };
-
+};
 
 /* 矢印キーの短縮定義 */
 // #define UP     UP_ARROW
