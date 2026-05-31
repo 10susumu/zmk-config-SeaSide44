@@ -68,7 +68,7 @@
 #define QUES   QUESTION
 #define PSCR   PRINTSCREEN
 #define PGUP   PAGE_UP
-#define PGDN   PAGE_DOW
+#define PGDN   PAGE_DOWN
 #define COMM   COMMA
 #define SLSH   SLASH
 #define ASTR   ASTERISK
