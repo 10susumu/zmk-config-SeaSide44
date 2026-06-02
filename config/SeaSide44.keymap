@@ -102,7 +102,7 @@ keymap {
 &kp ESC   &kp Q     &kp W     &kp E     &kp R     &kp T             &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSPC
 &mo L_CS  &kp A     &kp S     &kp D     &kp F     &kp G             &kp H     &kp J     &kp K     &kp L     &kp JP_QUES  &mo L_CS
 &mo L_NM  &kp Z     &kp X     &kp C     &kp V     &kp B             &kp N     &kp M     &mkp MB1  &mkp MB2  &mo L_SR  &mo L_NM
-          &kp LGUI  &kp LALT  &mo L_SC  CTL_LG2   SFT_SPC           LSY_ENT   LNM_LG1   &none     &none     &mo L_BL
+          &kp LGUI  &kp LALT  &mo L_SC  CTL_LG2   SFT_SPC           LSY_ENT   LNM_LG1   &mo L_CS  &mo L_NM  &mo L_BL
             >;
         };
 
@@ -145,7 +145,7 @@ keymap {
         BLUETOOTH {
             bindings = <
 &none     &none     &none     &none     &none     &none             &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &none
-&none     &none     &none     &none     &none     &none             &bt BT_CLR &none     &none     &none     &none     &none
+&none     &none     &none     &none     &none     &none             &bt BT_CLR  &bt BT_CLR_ALL    &none     &none     &none     &none
 &none     &none     &none     &none     &none     &none             &none     &none     &none     &none     &none     &bootloader
           &trans    &trans    &trans    &trans    &trans            &trans    &trans    &none     &none     &none
             >;
