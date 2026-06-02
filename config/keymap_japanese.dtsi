@@ -23,7 +23,7 @@
      "Y88P"
 *******************************************************************************/
 
-#include "keymap_japanese.dtsi"
+#include "keycodes.dtsi"
 
 // Aliases
 #define JP_ZKHK KC_GRV  // Zenkaku ↔ Hankaku ↔ Kanji (半角 ↔ 全角 ↔ 漢字)
