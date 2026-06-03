@@ -82,8 +82,9 @@
 /* 複合キー・システムキーの短縮定義 */
 #define CTL_LG2 &mt LCTRL LANG2        // ctrl 英字
 #define SFT_SPC &mt LSHIFT SPACE       // shift space
-#define LSY_ENT &lt 3 ENTER            // レイヤ3 enter
-#define LNM_LG1 &lt 2 LANG1            // レイヤ2 かな
+#define LSY_ENT &lt SYMBOL ENTER            // レイヤ3 enter
+#define LNM_LG1 &lt NUMBER LANG1            // レイヤ2 かな
+#define LSC_QUE &lt SCROLL JP_QUES       // shift ?
 #define BITWAR  &kp LS(LA(F))          // shift alt f
 #define LSUP    &kp LS(UP)             // shift 上
 #define LSDOWN  &kp LS(DOWN)           // shift 下
@@ -100,8 +101,8 @@ keymap {
         default_layer {
             bindings = <
 &kp ESC   &kp Q     &kp W     &kp E     &kp R     &kp T             &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSPC
-&mo L_CS  &kp A     &kp S     &kp D     &kp F     &kp G             &kp H     &kp J     &kp K     &kp L     &kp JP_QUES  &mo L_CS
-&mo L_NM  &kp Z     &kp X     &kp C     &kp V     &kp B             &kp N     &kp M     &mkp MB1  &mkp MB2  &mo L_SR  &mo L_NM
+&mo L_CS  &kp A     &kp S     &kp D     &kp F     &kp G             &kp H     &kp J     &kp K     &kp L     LSC_QUE   &mo L_CS
+&mo L_NM  &kp Z     &kp X     &kp C     &kp V     &kp B             &kp N     &kp M     &mkp MB1  &mkp MB2  &mo L_SR  &mo L_SR
           &kp LGUI  &kp LALT  &mo L_SC  CTL_LG2   SFT_SPC           LSY_ENT   LNM_LG1   &mo L_BL
             >;
         };
