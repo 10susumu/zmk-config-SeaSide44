@@ -4,6 +4,8 @@
 
 #include <dt-bindings/zmk/keys.h>
 
+#define JP(key) &kp JP_##key
+
 #define JP_ZKHK GRAVE // Zenkaku ↔ Hankaku ↔ Kanji (半角 ↔ 全角 ↔ 漢字)
 #define JP_1    N1    // 1
 #define JP_2    N2    // 2
