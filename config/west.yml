@@ -17,5 +17,9 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: v0.3-branch
+    - name: zmk-feature-blueboot
+      url: https://github.com/te9no/zmk-feature-blueboot
+      revision: main
+      path: modules/zmk-feature-blueboot
   self:
     path: config
