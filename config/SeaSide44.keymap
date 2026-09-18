@@ -99,6 +99,12 @@
 #define LSC_QUE &lt SCROLL JP_QUES       // スクロール ?
 #define LSR_MB2 &mb2_layer SCROLL MB2          // スクロール 右クリック
 #define BITWAR  &kp LS(LA(F))          // shift alt f
+
+#define RECORD  &kp LC(LA(R))          // ctrl alt r
+#define SAVE    &kp LC(LA(S))          // ctrl alt s
+#define PLAY   &kp LC(LA(P))          // ctrl alt p
+#define PAUSE   &kp LC(LA(B))          // ctrl alt b
+
 #define LSUP    &kp LS(UP)             // shift 上
 #define LSDOWN  &kp LS(DOWN)           // shift 下
 #define LSLEFT  &kp LS(LEFT)           // shift 左
@@ -108,6 +114,7 @@
 #define LALEFT  &kp LA(LEFT)           // alt 左
 #define LARIGHT &kp LA(RIGHT)          // alt 右
 #define BOOT    &bootloader          // ブートローダー起動
+#define BLEBOOT &blueboot           // BlueBoot 起動
 #define BTS0    &bt BT_SEL 0         // 接続先0
 #define BTS1    &bt BT_SEL 1         // 接続先1
 #define BTS2    &bt BT_SEL 2         // 接続先2
@@ -157,9 +164,9 @@ keymap {
 
         SHORTCUT {
             bindings = <
-&none     &none     &none     &none     &none     &none             &none     LGLEFT    LSUP      LGRIGHT   &none     &none
-&none     &none     &none     &none     BITWAR    &none             &none     LSLEFT    LSDOWN    LSRIGHT   &none     &none
-BOOT      &none     &none     &none     &none     &none             &none     &none     &none     &none     &none     &none
+&none     &none     &none     &none     RECORD    &none             &none     LGLEFT    LSUP      LGRIGHT   PLAY      &none
+&none     &none     SAVE      &none     BITWAR    &none             &none     LSLEFT    LSDOWN    LSRIGHT   &none     &none
+BLEBOOT   &none     &none     &none     &none     PAUSE             &none     &none     &none     &none     &none     &none
           &trans    &trans    &trans    &trans    &trans            &trans    &trans    &none     &none     &none
             >;
         };
@@ -168,7 +175,7 @@ BOOT      &none     &none     &none     &none     &none             &none     &n
             bindings = <
 &none     &none     &none     &none     &none     &none             BTS0      BTS1      BTS2      BTS3      BTS4      &none
 &none     &none     &none     &none     &none     &none             BTC       BTC_ALL   &none     &none     &none     &none
-&none     &none     &none     &none     &none     &none             &none     &none     &none     &none     &none     &blueboot
+&none     &none     &none     &none     &none     &none             &none     &none     &none     &none     &none     BLEBOOT
           &trans    &trans    &trans    &trans    &trans            &trans    &trans    &none     &none     &none
             >;
         };
