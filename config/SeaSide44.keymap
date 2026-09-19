@@ -104,6 +104,7 @@
 #define SAVE    &kp LC(LA(S))          // ctrl alt s
 #define PLAY   &kp LC(LA(P))          // ctrl alt p
 #define PAUSE   &kp LC(LA(B))          // ctrl alt b
+#define SENDENV  &kp LC(LS(LA(G)))     // ctrl shift alt g
 
 #define LSUP    &kp LS(UP)             // shift 上
 #define LSDOWN  &kp LS(DOWN)           // shift 下
@@ -165,7 +166,7 @@ keymap {
         SHORTCUT {
             bindings = <
 &none     &none     &none     &none     RECORD    &none             &none     LGLEFT    LSUP      LGRIGHT   PLAY      &none
-&none     &none     SAVE      &none     BITWAR    &none             &none     LSLEFT    LSDOWN    LSRIGHT   &none     &none
+&none     &none     SAVE      &none     BITWAR    SENDENV           &none     LSLEFT    LSDOWN    LSRIGHT   &none     &none
 BLEBOOT   &none     &none     &none     &none     PAUSE             &none     &none     &none     &none     &none     &none
           &trans    &trans    &trans    &trans    &trans            &trans    &trans    &none     &none     &none
             >;
