@@ -42,12 +42,14 @@
         };
 
         number_layer_ime: number_layer_ime {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             bindings = <&kp LANG2>,
-                       <&macro_press &mo NUMBER>,
+                       <&macro_param_1to1>,
+                       <&macro_press &mo MACRO_PLACEHOLDER>,
                        <&macro_pause_for_release>,
-                       <&macro_release &mo NUMBER>,
+                       <&macro_param_1to1>,
+                       <&macro_release &mo MACRO_PLACEHOLDER>,
                        <&kp LANG1>;
             label = "NUMBER_LAYER_IME";
         };
@@ -66,9 +68,9 @@
         lt_number_ime: lt_number_ime {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_NUMBER_IME";
-            bindings = <&number_layer_ime>, <&kp LANG1>;
+            bindings = <&number_layer_ime>, <&kp>;
 
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <120>;
             quick-tap-ms = <120>;
@@ -115,7 +117,7 @@
 #define CTL_LG2 &mt LCTRL LANG2        // ctrl 英字
 #define SFT_SPC &mt LSHIFT SPACE       // shift space
 #define LSY_ENT &lt SYMBOL ENTER            // レイヤ3 enter
-#define LNM_LG1 &lt_number_ime              // レイヤ2 英字（押下）/かな（解放）
+#define LNM_LG1 &lt_number_ime NUMBER LANG1 // レイヤ2 英字（押下）/かな（解放）
 #define LSC_QUE &lt SCROLL JP_QUES       // スクロール ?
 #define LSR_MB2 &mb2_layer SCROLL MB2          // スクロール 右クリック
 #define BITWAR  &kp LS(LA(F))          // shift alt f
