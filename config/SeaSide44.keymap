@@ -50,6 +50,7 @@
                        <&macro_pause_for_release>,
                        <&macro_param_1to1>,
                        <&macro_release &mo MACRO_PLACEHOLDER>,
+                       <&macro_tap>,
                        <&kp LANG1>;
             label = "NUMBER_LAYER_IME";
         };
