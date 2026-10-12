@@ -73,16 +73,15 @@
             tapping-term-ms = <120>;
             quick-tap-ms = <120>;
         };
-    };
 
-    behaviors {
-    mb2_layer: mb2_layer {
-        compatible = "zmk,behavior-hold-tap";
+        mb2_layer: mb2_layer {
+            compatible = "zmk,behavior-hold-tap";
 
-        #binding-cells = <2>;
-        bindings = <&mo>, <&mkp>;
+            #binding-cells = <2>;
+            bindings = <&mo>, <&mkp>;
 
-        tapping-term-ms = <120>;
+            tapping-term-ms = <120>;
+        };
     };
 };
 
